@@ -49,25 +49,24 @@
       transform: rotateY(180deg);
     }
 
-    .card-face {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-    }
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px; /* ensures the container matches the image */
+    overflow: hidden; /* hides any image edges that stick out */
+}
 
-    .card-back {
-      transform: rotateY(180deg);
-    }
+.card-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px; /* smooth corners */
+    border: 2px solid #e0e0e0; /* subtle grey outline */
+}
 
-    .card-face img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    
   </style>
 </head>
 <body>
