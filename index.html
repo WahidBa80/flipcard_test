@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flip Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0b1020;
+      font-family: system-ui, sans-serif;
+      color: #fff;
+    }
+
+    .card-wrapper {
+      perspective: 1000px;
+    }
+
+    /* Hide the checkbox */
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .card-label {
+      cursor: pointer;
+      display: block;
+    }
+
+    .card {
+      width: 260px;
+      height: 380px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease;
+    }
+
+    /* Flip when checked */
+    input[type="checkbox"]:checked + .card-label .card {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    .card-face img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-wrapper">
+    <input type="checkbox" id="flip">
+    <label for="flip" class="card-label">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="front.png" alt="Front of card">
+        </div>
+        <div class="card-face card-back">
+          <img src="back.png" alt="Back of card">
+        </div>
+      </div>
+    </label>
+  </div>
+
+</body>
+</html> 
