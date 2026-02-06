@@ -32,12 +32,14 @@
     }
 
     .card {
-      width: 260px;
-      height: 380px;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 0.6s ease;
-    }
+  width: 80vw; /* 80% of the phone’s width */
+  height: 120vw; /* maintains a 2:3 ratio */
+  max-width: 360px; /* don’t get too huge on tablets */
+  max-height: 540px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
 
     /* Flip when checked */
     input[type="checkbox"]:checked + .card-label .card {
