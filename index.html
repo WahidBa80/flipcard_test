@@ -21,7 +21,7 @@ body {
   font-family: system-ui, sans-serif;
 }
 
-/* Wrapper for perspective */
+/* Perspective wrapper */
 .card-wrapper {
   perspective: 1000px;
 }
@@ -31,7 +31,7 @@ body {
   display: none;
 }
 
-/* Make the whole card tappable */
+/* Make whole card tappable */
 .card-label {
   display: block;
   cursor: pointer;
@@ -46,9 +46,9 @@ body {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s ease;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
 }
 
 /* Flip when checked */
@@ -64,7 +64,7 @@ body {
   backface-visibility: hidden;
 }
 
-/* Back face flipped */
+/* Back face rotated */
 .card-back {
   transform: rotateY(180deg);
 }
