@@ -68,11 +68,13 @@ body {
 /* Front face */
 .card-front {
   transform: rotateY(0deg);
+  z-index: 1;
 }
 
-/* Back face rotated */
+/* Back face */
 .card-back {
   transform: rotateY(180deg);
+  z-index: 2; /* CRITICAL FIX */
 }
 
 /* Image styling */
@@ -107,10 +109,8 @@ body {
 
 <div class="card-wrapper">
 
-  <!-- Checkbox -->
   <input type="checkbox" id="flip">
 
-  <!-- Label wraps the card -->
   <label for="flip" class="card-label">
 
     <div class="card">
