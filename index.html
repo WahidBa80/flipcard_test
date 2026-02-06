@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en" style="transform-style: preserve-3d;">
 <head>
 <meta charset="UTF-8">
@@ -19,13 +19,13 @@ body {
   padding-bottom: 40px;
   overflow-x: hidden;
   font-family: system-ui, sans-serif;
-  transform-style: preserve-3d; /* NEW */
+  transform-style: preserve-3d;
 }
 
 /* Perspective wrapper */
 .card-wrapper {
   perspective: 1000px;
-  transform-style: preserve-3d; /* NEW */
+  transform-style: preserve-3d;
 }
 
 /* Hide checkbox */
@@ -37,7 +37,7 @@ body {
 .card-label {
   display: block;
   cursor: pointer;
-  transform-style: preserve-3d; /* NEW */
+  transform-style: preserve-3d;
 }
 
 /* Card container */
@@ -66,6 +66,7 @@ body {
   height: 100%;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  background: white; /* ⭐ FIX: forces opaque layer */
 }
 
 /* Front face */
