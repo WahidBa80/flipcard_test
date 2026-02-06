@@ -27,7 +27,7 @@ body {
 }
 
 /* Hide checkbox */
-.card-wrapper input[type="checkbox"] {
+#flip {
   display: none;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 /* Flip when checked */
-.card-wrapper input[type="checkbox"]:checked ~ .card {
+#flip:checked + .card-label .card {
   transform: rotateY(180deg);
 }
 
@@ -100,8 +100,13 @@ body {
 <body>
 
 <div class="card-wrapper">
+
+  <!-- Checkbox -->
   <input type="checkbox" id="flip">
+
+  <!-- Label wraps the card -->
   <label for="flip" class="card-label">
+
     <div class="card">
 
       <div class="card-face card-front">
@@ -113,6 +118,7 @@ body {
       </div>
 
     </div>
+
   </label>
 </div>
 
